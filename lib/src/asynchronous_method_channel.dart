@@ -23,6 +23,7 @@ import 'package:flutter/services.dart';
 class AsynchronousMethodChannel implements MethodChannel {
   static const DEBUG = false;
   static const TAG = "AsyncMethodChannel";
+  static const timeout = 5;
   final MethodChannel _channel;
 
   final Map<String, Completer> _jobs = {};
@@ -150,7 +151,7 @@ class AsynchronousMethodChannel implements MethodChannel {
       await _channel.invokeMethod<T>(method, {
         "__job_id": jobId,
         "__argument": arguments,
-      }).timeout(Duration(seconds: 1));
+      }).timeout(Duration(seconds: timeout));
     } on TimeoutException catch (_) {
       throw Exception(
           "On the platform side, you must first call result.success(null) and then execute the asynchronous task.");
