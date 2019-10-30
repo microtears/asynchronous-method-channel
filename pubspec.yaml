@@ -1,6 +1,8 @@
 name: asynchronous_method_channel
-description: The asynchronous method channel for Flutter application.
-version: 1.0.0
+description: The asynchronous method channel is a named channel which supports
+  asynchronous return results for communicating with the Flutter
+  application using asynchronous method calls.
+version: 1.0.1
 author: microtears <microtears@gmail.com>
 homepage: https://github.com/microtears/asynchronous-method-channel
 
