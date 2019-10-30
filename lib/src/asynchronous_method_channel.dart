@@ -153,7 +153,7 @@ class AsynchronousMethodChannel implements MethodChannel {
         "__argument": arguments,
       }).timeout(Duration(seconds: timeout));
     } on TimeoutException catch (_) {
-      throw Exception(
+      throw StateError(
           "On the platform side, you must first call result.success(null) and then execute the asynchronous task.");
     }
     return job.future;
