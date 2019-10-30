@@ -16,7 +16,7 @@ import kotlin.coroutines.CoroutineContext
 
 class MainActivity: FlutterActivity() , AsynchronousMethodChannel.MethodCallHandler {
     companion object{
-        const val CHANNEL="AsynchronousMethodChannelExample";
+        const val CHANNEL="AsynchronousMethodChannelExample"
     }
     private var parentJob = Job()
     private val coroutineContext: CoroutineContext
@@ -26,7 +26,7 @@ class MainActivity: FlutterActivity() , AsynchronousMethodChannel.MethodCallHand
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         GeneratedPluginRegistrant.registerWith(this)
-        AsynchronousMethodChannel(flutterView, CHANNEL).setMethodCallHandler(this);
+        AsynchronousMethodChannel(flutterView, CHANNEL).setMethodCallHandler(this)
 
     }
 
