@@ -1,16 +1,28 @@
 # asynchronous_method_channel
 
-The asynchronous method channel is a named channel which supports asynchronous return results for communicating with the Flutter application using asynchronous method calls.
+The asynchronous method channel is a named channel which supports 
+asynchronous return results for communicating with the Flutter 
+application using asynchronous method calls.
 
 ## Use AsynchronousMethodChannel on Android by kotlin
 
-The following is an example of using the kotlin coroutine for asynchronous tasks and returning results.
+The following is an example of using the kotlin coroutine 
+for asynchronous tasks and returning results.
+
+One thing you need to know before you officially start is 
+that the gradle of the Android module in the Flutter app 
+does not automatically import the packages we need, 
+you must manually add the following code.
+
+```kotlin
+import io.flutter.plugins.asynchronous_method_channel.AsynchronousMethodChannel
+```
 
 ```kotlin
 
 class MainActivity: FlutterActivity() , AsynchronousMethodChannel.MethodCallHandler {
     companion object{
-        const val CHANNEL="AsynchronousMethodChannelExample";
+        const val CHANNEL="AsynchronousMethodChannelExample"
     }
     private var parentJob = Job()
     private val coroutineContext: CoroutineContext
@@ -20,7 +32,7 @@ class MainActivity: FlutterActivity() , AsynchronousMethodChannel.MethodCallHand
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         GeneratedPluginRegistrant.registerWith(this)
-        AsynchronousMethodChannel(flutterView, CHANNEL).setMethodCallHandler(this);
+        AsynchronousMethodChannel(flutterView, CHANNEL).setMethodCallHandler(this)
     }
 
 
