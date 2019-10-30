@@ -98,15 +98,7 @@ class AsynchronousMethodChannel implements MethodChannel {
       };
 
       final MockResult result = MockResult(onSuccess, onError);
-      try {
-        handler(rawCall, result);
-      } catch (e) {
-        result.error(
-          "MOCK_ASYNCHRONOUS_METHOD_CALL_ERROR",
-          "An error occurred while processing the mock method call.",
-          e.toString(),
-        );
-      }
+      handler(rawCall, result);
       return null;
     } else {
       return handler(call, null);
