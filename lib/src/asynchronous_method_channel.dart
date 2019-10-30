@@ -105,7 +105,7 @@ class AsynchronousMethodChannel implements MethodChannel {
     }
   }
 
-  /// Generate is unique id.
+  /// Generate a unique id.
   static String generateId() {
     return DateTime.now().millisecondsSinceEpoch.toString();
   }
