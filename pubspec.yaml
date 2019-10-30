@@ -1,7 +1,7 @@
 name: asynchronous_method_channel
 description: The asynchronous method channel for Flutter application.
 version: 1.0.0
-author: microtears
+author: microtears <microtears@gmail.com>
 homepage: https://github.com/microtears/asynchronous-method-channel
 
 environment:
