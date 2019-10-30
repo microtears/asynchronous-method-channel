@@ -65,7 +65,7 @@ class MainActivity: FlutterActivity() , AsynchronousMethodChannel.MethodCallHand
     }
 
     override fun onDestroy() {
-        // cancel all asynchronous job
+        // cancel all asynchronous jobs
         scope.cancel()
         super.onDestroy()
     }
