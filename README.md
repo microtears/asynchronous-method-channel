@@ -4,6 +4,11 @@ The asynchronous method channel is a named channel which supports
 asynchronous return results for communicating with the Flutter 
 application using asynchronous method calls.
 
+## Flutter Environment
+
+- version: v1.9.1+hotfix.6
+- channel: master
+
 ## Use AsynchronousMethodChannel on Android by kotlin
 
 The following is an example of using the kotlin coroutine 
