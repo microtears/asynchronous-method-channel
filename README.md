@@ -227,7 +227,7 @@ void main() {
 
 Release next version.
 
-## [中文文档](#)
+## [中文文档](https://juejin.im/post/5db9bd816fb9a0206965a4d4)
 
 ## More
 
